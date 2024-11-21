@@ -36,12 +36,10 @@ class RandomForestPM25Model:
         self.y_test_original = None
     
     def load_data(self):
-        if "GOOGLE_APPLICATION_CREDENTIALS" not in os.environ:
-            raise EnvironmentError("GOOGLE_APPLICATION_CREDENTIALS is not set. Ensure the service account key is correctly configured.")
         client = storage.Client()
 
         # Specify your bucket name and the path to the pickle file in the 'processed' folder
-        bucket_name = 'airquality-mlops-rg'
+        bucket_name = 'github-actions-gcp-model'
         pickle_file_path = 'processed/train/feature_eng_data.pkl'
 
         # Get the bucket and the blob (file)
@@ -86,7 +84,7 @@ class RandomForestPM25Model:
         storage_client = storage.Client(project="airquality-438719")
 
         # Define the bucket and the path to store the model weights
-        bucket_name = "airquality-mlops-rg"
+        bucket_name = "github-actions-gcp-model"
         model_blob_path = "weights/model/model.pkl"  # Path in the bucket where the model will be saved
 
         # Get the bucket
@@ -106,7 +104,7 @@ class RandomForestPM25Model:
 
 def main():
     #mlflow.set_experiment("PM2.5 Random Forest")
-    bucket_name = "airquality-mlops-rg"
+    bucket_name = "github-actions-gcp-model"
     train_file_gcs = f'gs://{bucket_name}/processed/train/feature_eng_data.pkl'
     model_save_path_gcs = f'gs://{bucket_name}/weights/model/model.pth'
 
