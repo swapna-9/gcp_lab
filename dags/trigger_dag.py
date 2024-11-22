@@ -40,6 +40,7 @@ default_args = {
  
 # Define the DAG
 with DAG(
+    'datapipeline_new',
     default_args=default_args,
     description='A DAG to run training.py and send email notifications',
     schedule_interval=None,  # Run manually or on trigger
