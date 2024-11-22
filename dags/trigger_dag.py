@@ -57,7 +57,7 @@ with DAG(
         task_id='send_email',
         to='anirudhak881@gmail.com',  # Replace with your email
         subject='Training Job Completed',
-        html_content='<p>The training job has been successfully completed!</p>'
+        html_content='<p>The training job has been successfully completed!</p>',
         conn_id='gmail_smtp'
     )
  
