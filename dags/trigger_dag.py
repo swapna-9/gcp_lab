@@ -26,7 +26,7 @@ from airflow import DAG
 from airflow.operators.python_operator import PythonOperator
 from airflow.operators.email_operator import EmailOperator
 from datetime import datetime
-from train_and_save_model import main # Import the training function
+from my_operators.train_and_save_model import main # Import the training function
  
 # Default DAG arguments
 default_args = {
