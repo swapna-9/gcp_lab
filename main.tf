@@ -1,6 +1,6 @@
 # Provider block for Google Cloud
 provider "google" {
-  credentials = file("/Users/swapnavippaturi/Downloads/key.json")
+  credentials = file("/Users/swapnavippaturi/Downloads/tidy-test.json")
   project     = var.project_id  # GCP Project ID
   region      = var.region      # GCP Region
 }
