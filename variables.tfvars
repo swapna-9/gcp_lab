@@ -1,5 +1,5 @@
-project_id        = "airquality-438719"
-bucket_name       = "air-composer-bucket"  # Ensure the bucket name is globally unique
+project_id        = "tidy-simplicity-442419-q7"
+bucket_name       = "airdag-bucket"  # Ensure the bucket name is globally unique
 region            = "us-central1"
-composer_env_name = "airquality-composer"
-serviceAccount    = "airquality@airquality-438719.iam.gserviceaccount.com"
+composer_env_name = "dag-composer"
+serviceAccount    = "daggithubactions@tidy-simplicity-442419-q7.iam.gserviceaccount.com"
