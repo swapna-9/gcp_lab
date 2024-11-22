@@ -21,11 +21,11 @@ jobs:
  
     - name: Upload DAG to Composer
       run: |
-        gsutil cp dags/trigger_dag.py gs://us-central1-traindag-93ffccec-bucket/dags/trigger_dag.py
-        gsutil cp train_and_save_model.py/ gs://us-central1-traindag-93ffccec-bucket/dags/my_operators/train_and_save_model.py/
+        gsutil cp dags/trigger_dag.py gs://us-central1-airquality-comp-0ee5e090-bucket/dags/trigger_dag.py
+        gsutil cp train_and_save_model.py/ gs://us-central1-airquality-comp-0ee5e090-bucket/dags/my_operators/train_and_save_model.py/
  
     - name: Trigger the DAG
       run: |
-        gcloud composer environments run dagtrigger \
+        gcloud composer environments run airquality-composer \
           --location=us-central1 trigger_dag \
-          -- <DAG_NAME>
+          -- datapipeline_new
