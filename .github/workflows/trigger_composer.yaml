@@ -29,6 +29,6 @@ jobs:
  
     - name: Trigger the DAG
       run: |
-        gcloud composer environments run <COMPOSER_ENV_NAME> \
-          --location=<COMPOSER_LOCATION> trigger_dag \
+        gcloud composer environments run dagtrigger \
+          --location=us-central1 trigger_dag \
           -- <DAG_NAME>
